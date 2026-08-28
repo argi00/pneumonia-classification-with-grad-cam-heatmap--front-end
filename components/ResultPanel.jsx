@@ -74,7 +74,7 @@ function ProbabilityBar({ prediction, probability }) {
             "absolute inset-y-0 left-0 rounded-full transition-all duration-700 ease-out",
             isPneumonia ? "bg-rose-500" : "bg-emerald-500"
           )}
-         {/* style={{ width: `${pct}%` }} */}
+         style={{ width: `${pct}%` }} 
         />
         {/* 50% threshold line */}
         <div className="absolute inset-y-0 left-1/2 w-px bg-slate-300/80" />
