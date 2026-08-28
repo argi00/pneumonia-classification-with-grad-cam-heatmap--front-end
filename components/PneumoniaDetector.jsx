@@ -159,7 +159,7 @@ export default function PneumoniaDetector() {
           {loading ? (
             <>
               <SpinnerIcon />
-              Analyzing…
+              Analyse en cours …
             </>
           ) : (
             "Analyze X-ray"

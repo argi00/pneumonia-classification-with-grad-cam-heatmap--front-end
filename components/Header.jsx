@@ -23,7 +23,7 @@ export default function Header() {
         {/* Warning badge */}
         <span className="inline-flex items-center gap-1.5 text-xs font-medium text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-3 py-1 select-none">
           <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse-dot" aria-hidden="true" />
-          Research use only
+          Pour la Recherche
         </span>
       </div>
     </header>

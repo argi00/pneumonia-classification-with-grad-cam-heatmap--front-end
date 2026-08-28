@@ -146,7 +146,7 @@ export default function DropZone({ onFile, preview, file, onClear }) {
           <p className="text-xs text-slate-400 mt-1">
             or{" "}
             <span className="text-blue-600 underline underline-offset-2 cursor-pointer">
-              browse your files
+                  Charger une image
             </span>
             {" "}· PNG, JPG, WebP
           </p>
