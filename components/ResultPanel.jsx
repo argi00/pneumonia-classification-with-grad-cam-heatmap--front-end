@@ -81,8 +81,7 @@ function ProbabilityBar({ prediction, probability }) {
       </div>
 
       <div className="flex justify-between text-xs text-slate-400">
-        
-        <span className="text-slate-300">Confidence 50%</span>
+
       
       </div>
     </div>
