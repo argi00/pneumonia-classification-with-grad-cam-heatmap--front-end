@@ -31,7 +31,7 @@ function WarnIcon() {
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
 function ResultBadge({ prediction, probability }) {
-  const isPneumonia = prediction === "PNEUMONIE";
+  const isPneumonia = prediction === "PNEUMONIA";
   return (
     <div
       className={cn(
@@ -59,7 +59,7 @@ function ResultBadge({ prediction, probability }) {
 
 function ProbabilityBar({ prediction, probability }) {
   const pct = Math.round(probability * 100);
-  const isPneumonia = prediction === "PNEUMONIE";
+  const isPneumonia = prediction === "PNEUMONIA";
 
   return (
     <div className="space-y-1.5" aria-label={`Confidence: ${pct}%`}>
