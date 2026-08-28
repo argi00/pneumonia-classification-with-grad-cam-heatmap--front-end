@@ -31,7 +31,7 @@ function WarnIcon() {
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
 function ResultBadge({ prediction, probability }) {
-  const isPneumonia = prediction === "PNEUMONIA";
+  const isPneumonia = prediction === "PNEUMONIE";
   return (
     <div
       className={cn(
@@ -44,7 +44,7 @@ function ResultBadge({ prediction, probability }) {
       aria-live="polite"
     >
       {isPneumonia ? <WarnIcon /> : <CheckIcon />}
-      <span>{isPneumonia ? "Pneumonia detected" : "No pneumonia"}</span>
+      <span>{isPneumonia ? "Pneumonie detecté" : "Pas de pneumonie"}</span>
       <span
         className={cn(
           "text-xs font-bold px-2 py-0.5 rounded-full",
@@ -59,13 +59,13 @@ function ResultBadge({ prediction, probability }) {
 
 function ProbabilityBar({ prediction, probability }) {
   const pct = Math.round(probability * 100);
-  const isPneumonia = prediction === "PNEUMONIA";
+  const isPneumonia = prediction === "PNEUMONIE";
 
   return (
     <div className="space-y-1.5" aria-label={`Confidence: ${pct}%`}>
       <div className="flex justify-between text-xs font-medium text-slate-400">
-        <span>Normal</span>
-        <span>Pneumonia</span>
+        <span>Normale</span>
+        <span>Pneumonie</span>
       </div>
 
       <div className="relative h-2.5 bg-slate-100 rounded-full overflow-hidden">
@@ -74,16 +74,16 @@ function ProbabilityBar({ prediction, probability }) {
             "absolute inset-y-0 left-0 rounded-full transition-all duration-700 ease-out",
             isPneumonia ? "bg-rose-500" : "bg-emerald-500"
           )}
-          style={{ width: `${pct}%` }}
+         {/* style={{ width: `${pct}%` }} */}
         />
         {/* 50% threshold line */}
         <div className="absolute inset-y-0 left-1/2 w-px bg-slate-300/80" />
       </div>
 
       <div className="flex justify-between text-xs text-slate-400">
-        <span>{100 - pct}%</span>
-        <span className="text-slate-300">threshold 50%</span>
-        <span>{pct}%</span>
+        
+        <span className="text-slate-300">Confidence 50%</span>
+      
       </div>
     </div>
   );
@@ -191,7 +191,7 @@ export default function ResultPanel({ result }) {
   <strong className="font-medium text-slate-500">
     {" "}fins de recherche
   </strong>.
-  Les résultats ne doivent pas être utilisés comme substitut à un diagnostic médical professionnel.
+  Les résultats ne doivent pas être utilisés comme substitut d'un diagnostic médical professionnel.
 </p>
     </section>
   );
